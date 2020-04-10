@@ -1,0 +1,36 @@
+.Board-cell {
+    border-color: var(--white);
+    border-style: solid;
+    border-width: 0 0 var(--borderWidth) var(--borderWidth);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &.played {
+      cursor: not-allowed;;
+    }
+    @extend .noselect;
+  }
+  .Board-cell:hover .hoverEffect{
+    display: inline;
+  }
+  .Board-cell:hover .hideEffect{
+    display: none;
+  }
+  .hoverEffect{
+    display: none;
+  }
+  .hideEffect{
+    display: none;
+  }
+
+  .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}

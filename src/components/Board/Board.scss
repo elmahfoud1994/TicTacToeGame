@@ -1,0 +1,11 @@
+.Board{
+  border-color: var(--white);
+  border-style: solid;
+  border-width: var(--borderWidth) var(--borderWidth) 0 0;
+}
+.Board-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

@@ -1,0 +1,104 @@
+.FeedbackBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+    margin-bottom: var(--borderWidth);
+    }
+.FeedbackBarPlayerTurn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    opacity:0.8;
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+}
+.PlayerTurnAnimation{
+    opacity:1;
+    animation: greenLight 3s ease-in infinite;
+}
+.FeedbackReset:hover{
+   cursor: pointer;
+   animation: rotate 1s linear 1;
+}
+.FeedBackMessage{
+    display: flex;
+    flex-flow: row;
+    justify-content:flex-start ;
+    align-items: center;
+
+}
+.FeedBackMessage span{
+    font-size:23px;
+    width: 7.5em;
+
+    white-space: nowrap;
+    font-family:'Franklin Gothic Medium';
+    overflow: hidden;
+    color: var(--white);
+    animation: typing 4s steps(40) 1s 1 normal both;
+}
+.FeedBackMessage img{
+    height: 50px;
+    width: 50px;
+    animation: show 4s 1 linear ;
+}
+
+
+//this animation lights up the symbole of the current player with a green light
+@keyframes greenLight{
+    0%{
+        background-color: var(--green);
+    }
+   
+    50%{
+        background-color: var(--light);
+    }
+    
+    100%{
+        background-color: var(--green);
+    }
+}
+
+// This animation rotates the reset symbol
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// This animation is responsible of the typing effect
+@keyframes typing{
+    from {
+        width: 0;
+    }
+    to{
+        width: 7.5em;
+    }
+}
+
+// This animation is used to reveal the emoji image
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

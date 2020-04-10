@@ -1,0 +1,50 @@
+:root {
+  --color2: #cccccc;
+  --white: #fff;
+  --light: #f1f1f1;
+  --black: rgba(2,0,.6,1);
+  --dark_blue: rgba(9,9,121,1);
+  --green: #1abc9c;
+  --borderWidth: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  background: linear-gradient(90deg, var(--black) 0%, var(--dark_blue) 35%);
+  background-size: 400% 400%;
+  color: var(--color2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: backgroundAnimation ease-in-out infinite 7s ;
+}
+
+//The animation change the background position
+@keyframes backgroundAnimation{
+  0%{
+   background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+
+
